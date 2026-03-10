@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Training outputs
+tmp/
+temp/
+
+# Local data and weights
+data/
+models/*.pt
+models/*.pth
+
+# Env and logs
+.env
+*.log

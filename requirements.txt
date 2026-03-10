@@ -1,0 +1,12 @@
+# Runtime
+numpy
+torch
+torchvision
+Pillow
+scikit-learn
+
+# Prompt and augmentation
+kornia
+ftfy
+regex
+packaging

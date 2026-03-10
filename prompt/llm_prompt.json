@@ -1,0 +1,432 @@
+{
+  "version": 2,
+  "format": {
+    "normal": [
+      ["sent_1_for_component_1","sent_2_for_component_1","sent_3_for_component_1"],
+      ["sent_1_for_component_2","sent_2_for_component_2","sent_3_for_component_2"],
+      ["sent_1_for_component_3","sent_2_for_component_3","sent_3_for_component_3"],
+      ["sent_1_for_component_4","sent_2_for_component_4","sent_3_for_component_4"],
+      ["sent_1_for_component_5","sent_2_for_component_5","sent_3_for_component_5"],
+      ["sent_1_for_component_6","sent_2_for_component_6","sent_3_for_component_6"]
+    ],
+    "abnormal": [
+      ["sent_1_for_component_1","sent_2_for_component_1","sent_3_for_component_1"],
+      ["sent_1_for_component_2","sent_2_for_component_2","sent_3_for_component_2"],
+      ["sent_1_for_component_3","sent_2_for_component_3","sent_3_for_component_3"],
+      ["sent_1_for_component_4","sent_2_for_component_4","sent_3_for_component_4"],
+      ["sent_1_for_component_5","sent_2_for_component_5","sent_3_for_component_5"],
+      ["sent_1_for_component_6","sent_2_for_component_6","sent_3_for_component_6"]
+    ]
+  },
+  "component_semantics": [
+    {"id": 1, "name": "structure",   "normal": "structural_integrity",        "abnormal": "structural_disruption"},
+    {"id": 2, "name": "intensity",   "normal": "intensity_consistency",       "abnormal": "intensity_deviation"},
+    {"id": 3, "name": "texture",     "normal": "texture_homogeneity",         "abnormal": "texture_irregularity"},
+    {"id": 4, "name": "morphology",  "normal": "morphological_regularity",    "abnormal": "morphological_deformation"},
+    {"id": 5, "name": "boundary",    "normal": "boundary_clarity",            "abnormal": "boundary_irregularity"},
+    {"id": 6, "name": "spatial",     "normal": "spatial_uniformity",          "abnormal": "spatial_distribution_shift"}
+  ],
+  "datasets": {
+    "Brain": {
+      "normal": [
+        [
+          "preserved gray–white matter organization with normal midline alignment",
+          "intact ventricular system without mass effect or herniation",
+          "anatomically symmetric brain structures with no focal disruption"
+        ],
+        [
+          "physiologic T1/T2 signal without focal hyperintensity or hypointensity",
+          "no abnormal contrast enhancement and no diffusion restriction pattern",
+          "expected tissue intensity profile across parenchyma and CSF spaces"
+        ],
+        [
+          "smooth parenchymal texture without patchy heterogeneity or coarse granularity",
+          "uniform local appearance without mottled or speckled abnormal patterns",
+          "consistent fine-scale texture across slices with no irregular patches"
+        ],
+        [
+          "normal global shape without compression, dilation, or asymmetric distortion",
+          "stable morphology with preserved sulci and ventricles",
+          "no swelling-related deformation and no focal bulging contour"
+        ],
+        [
+          "sharp tissue interfaces with clear lesion-free boundaries",
+          "well-defined structural borders without blurred or ragged edges",
+          "clean separation between regions without boundary disruption"
+        ],
+        [
+          "no focal abnormal hotspot and no diffuse global change across the field of view",
+          "spatially uniform normality without clustered suspicious regions",
+          "consistent normal appearance across the entire scan volume"
+        ]
+      ],
+      "abnormal": [
+        [
+          "focal structural disruption with mass effect or midline shift",
+          "anatomical distortion with tissue displacement or herniation signs",
+          "ventricular compression or boundary interruption by a lesion"
+        ],
+        [
+          "abnormal signal focus such as hyperintense edema or hypointense necrosis",
+          "atypical enhancement pattern including ring enhancement or nodular enhancement",
+          "unexpected diffusion restriction or intensity deviation from normal tissue"
+        ],
+        [
+          "heterogeneous texture with patchy mixture of intensities and coarse granularity",
+          "irregular mottled appearance with non-uniform local texture",
+          "disrupted fine-scale texture indicating abnormal tissue properties"
+        ],
+        [
+          "swelling-related deformation with asymmetric enlargement or compression",
+          "shape distortion due to edema, mass, or structural warping",
+          "abnormal morphology with focal bulge, collapse, or contour distortion"
+        ],
+        [
+          "irregular lesion boundary with blurred margins or ragged edges",
+          "discontinuous interfaces suggesting boundary invasion or disruption",
+          "poorly defined borders separating abnormal region from normal tissue"
+        ],
+        [
+          "localized abnormal focus with clustered suspicious region(s)",
+          "diffuse abnormal change spanning a broad anatomical territory",
+          "mixed spatial pattern with scattered multifocal abnormalities"
+        ]
+      ]
+    },
+
+    "Liver": {
+      "normal": [
+        [
+          "smooth liver contour with preserved segmental anatomy and no focal defect",
+          "intact parenchymal structure without space-occupying lesion",
+          "normal hepatic architecture without capsular distortion"
+        ],
+        [
+          "expected attenuation with physiologic enhancement pattern",
+          "no focal hypoattenuation or hyperattenuation suspicious for lesion",
+          "consistent density profile across liver parenchyma"
+        ],
+        [
+          "homogeneous parenchymal texture without coarse heterogeneity",
+          "uniform appearance without patchy nodularity or mottled texture",
+          "stable fine-grained texture across the liver region"
+        ],
+        [
+          "normal organ shape without bulging, retraction, or lobulated deformation",
+          "preserved morphology with no focal contour protrusion",
+          "no deformation consistent with mass effect"
+        ],
+        [
+          "clear lesion-free margins with sharp boundary between parenchyma and vessels",
+          "well-defined interfaces without blurred lesion border",
+          "distinct boundary appearance without irregular edge artifacts"
+        ],
+        [
+          "spatially uniform normal liver without focal cluster or diffuse shift",
+          "no segment-dominant abnormality and no widespread distribution change",
+          "consistent normality across all segments and slices"
+        ]
+      ],
+      "abnormal": [
+        [
+          "space-occupying lesion deforming hepatic structure or interrupting anatomy",
+          "focal mass or nodule causing structural disruption",
+          "capsular distortion or boundary interruption by abnormal region"
+        ],
+        [
+          "abnormal enhancement such as arterial hyperenhancement or delayed washout",
+          "focal hypoattenuating lesion or atypical attenuation deviation",
+          "unexpected density pattern inconsistent with normal parenchyma"
+        ],
+        [
+          "heterogeneous parenchymal texture with patchy irregular regions",
+          "coarse, uneven texture suggesting abnormal tissue composition",
+          "non-uniform granular appearance with mixed texture patterns"
+        ],
+        [
+          "contour bulging or capsular retraction indicating deformation",
+          "lobulated shape or segmental distortion due to lesion effect",
+          "abnormal morphology with irregular contour and shape warping"
+        ],
+        [
+          "ill-defined lesion margin with spiculated or irregular boundary",
+          "blurred interface between lesion and normal parenchyma",
+          "ragged boundary appearance suggesting infiltrative abnormality"
+        ],
+        [
+          "localized lesion distribution with one dominant focal region",
+          "multifocal scattered lesions across segments",
+          "diffuse involvement pattern spanning large liver territory"
+        ]
+      ]
+    },
+
+    "Retina_RESC": {
+      "normal": [
+        [
+          "continuous retinal layer stack with preserved ILM–RPE integrity",
+          "intact lamination without layer break or cavity formation",
+          "normal layer architecture with stable stratification"
+        ],
+        [
+          "physiologic reflectivity without abnormal hyperreflective foci",
+          "no focal hyporeflective fluid pocket and no atypical contrast shift",
+          "expected intensity profile across retinal layers"
+        ],
+        [
+          "regular OCT speckle texture without patchy heterogeneity",
+          "uniform micro-texture with no coarse granular disturbance",
+          "consistent fine texture along the B-scan without irregular patches"
+        ],
+        [
+          "normal thickness profile with preserved foveal contour",
+          "no edema-like swelling and no thinning-related deformation",
+          "stable morphology without bulging or depressed contour"
+        ],
+        [
+          "sharp layer boundaries with clear interfaces between major layers",
+          "well-defined RPE line without boundary irregularity",
+          "clean layer separation without blurred or broken borders"
+        ],
+        [
+          "no focal lesion region and no diffuse disruption across the scan",
+          "spatially uniform normality along the B-scan trajectory",
+          "consistent normal pattern across the entire retinal span"
+        ]
+      ],
+      "abnormal": [
+        [
+          "layer discontinuity or structural break with cavity or schisis-like separation",
+          "architectural disruption with detachment or layer splitting",
+          "abnormal structural change interrupting ILM–RPE integrity"
+        ],
+        [
+          "hyperreflective material or abnormal reflectivity deviation",
+          "hyporeflective fluid pocket consistent with edema or detachment",
+          "atypical intensity contrast pattern inconsistent with normal layering"
+        ],
+        [
+          "heterogeneous speckle with patchy irregular texture",
+          "coarse granular disturbance with non-uniform micro-texture",
+          "irregular local texture patterns suggesting abnormal tissue"
+        ],
+        [
+          "abnormal thickness with swelling, thinning, or contour deformation",
+          "distorted foveal profile with bulging or depressed morphology",
+          "shape warping consistent with edema or traction"
+        ],
+        [
+          "irregular layer interfaces with blurred or broken boundaries",
+          "ragged RPE/outer retina boundary with discontinuity",
+          "boundary disruption between layers surrounding abnormal region"
+        ],
+        [
+          "localized lesion-like region with clustered abnormality",
+          "diffuse disruption spanning a broad retinal area",
+          "scattered multifocal abnormal patches across the scan"
+        ]
+      ]
+    },
+
+    "Chest": {
+      "normal": [
+        [
+          "clear lung fields with preserved thoracic anatomy and no focal opacity",
+          "intact cardiomediastinal silhouette without structural displacement",
+          "normal rib and diaphragm contours without focal disruption"
+        ],
+        [
+          "expected radiographic density without focal consolidation",
+          "no abnormal hyperlucency or diffuse increased opacity pattern",
+          "stable intensity distribution across both lungs"
+        ],
+        [
+          "uniform lung texture without patchy interstitial pattern",
+          "no coarse reticulation and no irregular granular texture",
+          "consistent parenchymal texture without heterogeneous mottling"
+        ],
+        [
+          "normal lung volumes without collapse or mediastinal shift",
+          "no deformation pattern consistent with atelectasis or overinflation",
+          "preserved morphology without asymmetric distortion"
+        ],
+        [
+          "sharp boundaries of diaphragm and heart borders",
+          "well-defined pleural and mediastinal contours without blurring",
+          "clear interfaces without irregular margin disruption"
+        ],
+        [
+          "no focal opacity cluster and no diffuse bilateral pattern shift",
+          "spatially uniform normality across both lungs",
+          "consistent normal appearance without scattered suspicious foci"
+        ]
+      ],
+      "abnormal": [
+        [
+          "focal structural abnormality such as lobar collapse or displaced silhouette",
+          "architectural distortion with volume loss or mediastinal shift",
+          "structural disruption with abnormal thoracic contour pattern"
+        ],
+        [
+          "abnormal density such as consolidation, ground-glass opacity, or effusion",
+          "unexpected radiographic intensity deviation from normal lung fields",
+          "atypical contrast pattern with focal or diffuse opacity change"
+        ],
+        [
+          "heterogeneous lung texture with patchy interstitial or reticular pattern",
+          "coarse irregular texture with non-uniform mottling",
+          "irregular granular changes suggesting abnormal parenchymal texture"
+        ],
+        [
+          "morphologic deformation such as asymmetric volume loss or hyperinflation",
+          "shape distortion consistent with collapse, overexpansion, or shift",
+          "abnormal contour deformation with asymmetric thoracic morphology"
+        ],
+        [
+          "blurred or irregular borders of diaphragm, heart, or pleural interfaces",
+          "ragged margin appearance around opacity suggesting boundary irregularity",
+          "boundary disruption with indistinct anatomical interfaces"
+        ],
+        [
+          "localized opacity focus with clustered involvement",
+          "diffuse bilateral pattern spanning large lung regions",
+          "scattered multifocal opacities across both lungs"
+        ]
+      ]
+    },
+
+    "Retina_OCT2017": {
+      "normal": [
+        [
+          "continuous retinal layer stack with preserved ILM–RPE integrity",
+          "intact lamination without layer break or cavity formation",
+          "normal layer architecture with stable stratification"
+        ],
+        [
+          "physiologic reflectivity without abnormal hyperreflective foci",
+          "no focal hyporeflective fluid pocket and no atypical contrast shift",
+          "expected intensity profile across retinal layers"
+        ],
+        [
+          "regular OCT speckle texture without patchy heterogeneity",
+          "uniform micro-texture with no coarse granular disturbance",
+          "consistent fine texture along the B-scan without irregular patches"
+        ],
+        [
+          "normal thickness profile with preserved foveal contour",
+          "no edema-like swelling and no thinning-related deformation",
+          "stable morphology without bulging or depressed contour"
+        ],
+        [
+          "sharp layer boundaries with clear interfaces between major layers",
+          "well-defined RPE line without boundary irregularity",
+          "clean layer separation without blurred or broken borders"
+        ],
+        [
+          "no focal lesion region and no diffuse disruption across the scan",
+          "spatially uniform normality along the B-scan trajectory",
+          "consistent normal pattern across the entire retinal span"
+        ]
+      ],
+      "abnormal": [
+        [
+          "layer discontinuity or structural break with cavity or schisis-like separation",
+          "architectural disruption with detachment or layer splitting",
+          "abnormal structural change interrupting ILM–RPE integrity"
+        ],
+        [
+          "hyperreflective material or abnormal reflectivity deviation",
+          "hyporeflective fluid pocket consistent with edema or detachment",
+          "atypical intensity contrast pattern inconsistent with normal layering"
+        ],
+        [
+          "heterogeneous speckle with patchy irregular texture",
+          "coarse granular disturbance with non-uniform micro-texture",
+          "irregular local texture patterns suggesting abnormal tissue"
+        ],
+        [
+          "abnormal thickness with swelling, thinning, or contour deformation",
+          "distorted foveal profile with bulging or depressed morphology",
+          "shape warping consistent with edema or traction"
+        ],
+        [
+          "irregular layer interfaces with blurred or broken boundaries",
+          "ragged RPE/outer retina boundary with discontinuity",
+          "boundary disruption between layers surrounding abnormal region"
+        ],
+        [
+          "localized lesion-like region with clustered abnormality",
+          "diffuse disruption spanning a broad retinal area",
+          "scattered multifocal abnormal patches across the scan"
+        ]
+      ]
+    },
+
+    "Histopathology": {
+      "normal": [
+        [
+          "preserved tissue architecture with organized glandular or stromal structure",
+          "intact structural arrangement without invasive pattern",
+          "normal tissue organization without architectural disruption"
+        ],
+        [
+          "expected staining intensity without abnormal hyperchromasia",
+          "no atypical intensity contrast and no abnormal dark nuclear clusters",
+          "stable color and intensity distribution consistent with normal tissue"
+        ],
+        [
+          "uniform cellular texture with regular micro-patterns",
+          "homogeneous fine texture without coarse heterogeneity",
+          "consistent micro-texture without irregular patchy patterns"
+        ],
+        [
+          "regular morphology with consistent cell and gland shapes",
+          "no pleomorphism-like deformation and no distorted structural shapes",
+          "stable shape patterns without abnormal thickening or distortion"
+        ],
+        [
+          "clear boundaries between tissue compartments with sharp interfaces",
+          "well-defined gland and stroma borders without irregular margins",
+          "distinct interface clarity without ragged boundary disruption"
+        ],
+        [
+          "spatially uniform normal tissue without focal lesion cluster",
+          "no diffuse abnormal distribution across the field of view",
+          "consistent normality across the entire slide region"
+        ]
+      ],
+      "abnormal": [
+        [
+          "architectural disruption with invasive growth pattern or structural breakdown",
+          "structural defect with disorganized glandular arrangement",
+          "abnormal tissue architecture interrupting normal organization"
+        ],
+        [
+          "abnormal staining intensity with hyperchromasia or contrast deviation",
+          "atypical intensity distribution with unusually dark nuclear regions",
+          "unexpected staining contrast inconsistent with normal tissue"
+        ],
+        [
+          "heterogeneous cellular texture with patchy irregular micro-patterns",
+          "coarse, uneven texture with non-uniform cellular arrangement",
+          "irregular micro-texture indicating abnormal tissue properties"
+        ],
+        [
+          "morphological deformation with pleomorphism-like irregular shapes",
+          "distorted gland shapes or abnormal thickening and shape warping",
+          "abnormal morphology with irregular structural contours"
+        ],
+        [
+          "irregular boundaries with infiltrative margins or ragged interfaces",
+          "blurred compartment borders with boundary disruption",
+          "spiculated or ill-defined margins separating abnormal from normal"
+        ],
+        [
+          "localized malignant focus with clustered lesion region",
+          "diffuse involvement pattern spanning a broad area",
+          "scattered multifocal abnormal regions across the slide"
+        ]
+      ]
+    }
+  }
+}
