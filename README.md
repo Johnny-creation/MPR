@@ -99,7 +99,7 @@ Evaluation results on the six medical anomaly detection datasets are reported.
 | Retina_RESC | 0.9897 | 0.9909 | 0.9938 | 0.9949 |
 | Average | 0.9901 | 0.9899 | 0.9920 | 0.9923 |
 
-- Checkpoints download: `ttps://pan.baidu.com/s/1GThLCTh2y15_6GG-cSGCnA?pwd=1234`
+- Checkpoints download: `https://pan.baidu.com/s/1GThLCTh2y15_6GG-cSGCnA?pwd=1234`
 
 ## Outputs
 
