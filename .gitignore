@@ -7,6 +7,8 @@ tmp/
 temp/
 
 # Local data and weights
+best_pth_models.tar.gz
+MPR.tar.gz
 data/
 models/*.pt
 models/*.pth
@@ -14,3 +16,4 @@ models/*.pth
 # Env and logs
 .env
 *.log
+.vscode

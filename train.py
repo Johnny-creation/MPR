@@ -212,8 +212,8 @@ def train_single_dataset(base_args, clip_model, obj_name, shot: int):
             device=device,
         )
         auc_img = float(eval_out["auc_img"])
-        auc_pixel = float(eval_out["auc_pixel"])
-        pauc = float(eval_out["pauc"])
+        auc_pixel = float(eval_out["auc_pixel"]) if has_seg and eval_out["auc_pixel"] is not None else -1.0
+        pauc = float(eval_out["pauc"]) if eval_out["pauc"] is not None else auc_img
         score = (auc_img + auc_pixel) * 0.5 if has_seg else auc_img
 
         row = {
