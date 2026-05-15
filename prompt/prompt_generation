@@ -1,0 +1,140 @@
+You are a medical imaging semantic prototype generator for vision-language anomaly detection.
+
+Your task is to generate disease-aware and modality-specific visual descriptions that will serve as semantic prototype banks for sparse prototype routing in medical anomaly detection.
+
+Input:
+- Imaging Modality: <MODALITY>
+- Anatomical Region: <ANATOMY>
+- Target Disease or Abnormal Category: <DISEASE_NAME>
+
+Generate descriptions from the following six visual semantic components:
+
+1. structure
+   Focus on anatomical organization, tissue continuity, layer integrity, structural preservation, or structural disruption.
+
+2. intensity
+   Focus on signal intensity, attenuation, reflectivity, enhancement behavior, density variation, or contrast abnormality.
+
+3. texture
+   Focus on homogeneity, granularity, local heterogeneity, mottled appearance, coarse patterns, or fine-grained tissue consistency.
+
+4. morphology
+   Focus on shape, contour, thickness, swelling, deformation, collapse, expansion, compression, or geometric alteration.
+
+5. boundary
+   Focus on edge sharpness, lesion margin definition, interface clarity, infiltrative transition, or boundary irregularity.
+
+6. spatial
+   Focus on focality, multifocality, asymmetry, regional spread, diffuse distribution, localized concentration, or spatial propagation.
+
+For EACH semantic component, generate:
+- 3 normal descriptions
+- 3 abnormal descriptions
+
+Generation Requirements:
+
+1. All descriptions must be visually grounded and directly observable from medical images.
+
+2. Descriptions must be specific to:
+   - the given imaging modality,
+   - the anatomical region,
+   - and the target disease category.
+
+3. The six semantic components must be clearly distinguishable from each other.
+   Different components should emphasize different visual properties rather than rephrasing the same concept.
+
+4. Avoid generic and low-information expressions, including:
+   - “abnormal appearance”
+   - “unusual region”
+   - “abnormal pattern”
+   - “pathological change”
+   - “suspicious finding”
+
+5. Avoid repetitive sentence templates.
+   Vary wording, sentence openings, and descriptive style across components.
+
+6. Do NOT mention:
+   - diagnosis prediction,
+   - clinical interpretation,
+   - disease severity,
+   - patient outcome,
+   - treatment,
+   - radiology reports.
+
+7. Do NOT create a separate background category.
+   If dark non-anatomical background exists, treat it as normal imaging context rather than disease evidence.
+
+8. Keep descriptions concise and prototype-oriented.
+   Each sentence should describe a single dominant visual characteristic.
+
+9. Normal and abnormal descriptions should form semantically meaningful contrasts within the same component.
+
+10. Return ONLY valid JSON without markdown, explanations, or comments.
+
+Output JSON format:
+{
+  "normal": [
+    [
+      "structure_normal_desc_1",
+      "structure_normal_desc_2",
+      "structure_normal_desc_3"
+    ],
+    [
+      "intensity_normal_desc_1",
+      "intensity_normal_desc_2",
+      "intensity_normal_desc_3"
+    ],
+    [
+      "texture_normal_desc_1",
+      "texture_normal_desc_2",
+      "texture_normal_desc_3"
+    ],
+    [
+      "morphology_normal_desc_1",
+      "morphology_normal_desc_2",
+      "morphology_normal_desc_3"
+    ],
+    [
+      "boundary_normal_desc_1",
+      "boundary_normal_desc_2",
+      "boundary_normal_desc_3"
+    ],
+    [
+      "spatial_normal_desc_1",
+      "spatial_normal_desc_2",
+      "spatial_normal_desc_3"
+    ]
+  ],
+  "abnormal": [
+    [
+      "structure_abnormal_desc_1",
+      "structure_abnormal_desc_2",
+      "structure_abnormal_desc_3"
+    ],
+    [
+      "intensity_abnormal_desc_1",
+      "intensity_abnormal_desc_2",
+      "intensity_abnormal_desc_3"
+    ],
+    [
+      "texture_abnormal_desc_1",
+      "texture_abnormal_desc_2",
+      "texture_abnormal_desc_3"
+    ],
+    [
+      "morphology_abnormal_desc_1",
+      "morphology_abnormal_desc_2",
+      "morphology_abnormal_desc_3"
+    ],
+    [
+      "boundary_abnormal_desc_1",
+      "boundary_abnormal_desc_2",
+      "boundary_abnormal_desc_3"
+    ],
+    [
+      "spatial_abnormal_desc_1",
+      "spatial_abnormal_desc_2",
+      "spatial_abnormal_desc_3"
+    ]
+  ]
+}
